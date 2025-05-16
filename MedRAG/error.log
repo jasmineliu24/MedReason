@@ -1,0 +1,75 @@
+[W408 13:00:00.809357336 socket.cpp:752] [c10d] The client socket cannot be initialized to connect to [localhost]:29500 (errno: 97 - Address family not supported by protocol).
+W0408 13:04:38.054000 2430949 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 2431041 closing signal SIGTERM
+W0408 13:04:38.097000 2430949 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 2431042 closing signal SIGTERM
+W0408 13:04:38.098000 2430949 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 2431044 closing signal SIGTERM
+E0408 13:04:48.609000 2430949 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: -9) local_rank: 2 (pid: 2431043) of binary: /n/home13/jasmineliu/.conda/envs/kure_new/bin/python3.12
+Traceback (most recent call last):
+  File "/n/home13/jasmineliu/.conda/envs/kure_new/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/n/home13/jasmineliu/.conda/envs/kure_new/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/n/home13/jasmineliu/.conda/envs/kure_new/lib/python3.12/site-packages/torch/distributed/run.py", line 919, in main
+    run(args)
+  File "/n/home13/jasmineliu/.conda/envs/kure_new/lib/python3.12/site-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/n/home13/jasmineliu/.conda/envs/kure_new/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/n/home13/jasmineliu/.conda/envs/kure_new/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+========================================================
+test.py FAILED
+--------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+--------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-04-08_13:04:38
+  host      : holygpu8a15402.rc.fas.harvard.edu
+  rank      : 2 (local_rank: 2)
+  exitcode  : -9 (pid: 2431043)
+  error_file: <N/A>
+  traceback : Signal 9 (SIGKILL) received by PID 2431043
+========================================================
+slurmstepd: error: Detected 1 oom_kill event in StepId=9629043.batch. Some of the step tasks have been OOM Killed.
+W0408 13:13:09.901000 3344071 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 3344077 closing signal SIGTERM
+W0408 13:13:09.949000 3344071 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 3344079 closing signal SIGTERM
+W0408 13:13:09.949000 3344071 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 3344080 closing signal SIGTERM
+E0408 13:13:16.622000 3344071 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: -9) local_rank: 1 (pid: 3344078) of binary: /n/home13/jasmineliu/.conda/envs/kure_new/bin/python3.12
+Traceback (most recent call last):
+  File "/n/home13/jasmineliu/.conda/envs/kure_new/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/n/home13/jasmineliu/.conda/envs/kure_new/lib/python3.12/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^
+  File "/n/home13/jasmineliu/.conda/envs/kure_new/lib/python3.12/site-packages/torch/distributed/run.py", line 919, in main
+    run(args)
+  File "/n/home13/jasmineliu/.conda/envs/kure_new/lib/python3.12/site-packages/torch/distributed/run.py", line 910, in run
+    elastic_launch(
+  File "/n/home13/jasmineliu/.conda/envs/kure_new/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/n/home13/jasmineliu/.conda/envs/kure_new/lib/python3.12/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+========================================================
+test.py FAILED
+--------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+--------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-04-08_13:13:09
+  host      : holygpu8a15303.rc.fas.harvard.edu
+  rank      : 1 (local_rank: 1)
+  exitcode  : -9 (pid: 3344078)
+  error_file: <N/A>
+  traceback : Signal 9 (SIGKILL) received by PID 3344078
+========================================================
+slurmstepd: error: Detected 1 oom_kill event in StepId=9629038.batch. Some of the step tasks have been OOM Killed.

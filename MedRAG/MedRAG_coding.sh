@@ -1,0 +1,1 @@
+python test_MedRAG_coding.py --llm_name /n/holylfs06/LABS/kempner_undergrads/Lab/jasmineliu/Llama-3.3-70B-Instruct --k 5 --corpus_name Textbooks --retriever_name MedCPT --batch_size 128

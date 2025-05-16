@@ -1,0 +1,11 @@
+{
+    "llm_name": "OpenAI/gpt-3.5-turbo-16k",
+    "rag": true,
+    "HNSW": true,
+    "k": 32,
+    "corpus_name": "MedCorp",
+    "retriever_name": "MedCPT",
+    "results_dir": "./results",
+    "dataset_name": "medqa",
+    "batch_size": 1
+}

@@ -1,0 +1,46 @@
+# ignore environment files
+/__pycache__/
+*.pyc
+
+# ignore dataset files
+/dataset_raw/*
+/dataset_fine/
+/dataset_processed/
+/log/
+*.log
+/ref/
+
+# ignore result
+/result*/
+
+/figure/
+
+/test/
+
+*test.ipynb
+
+*.jsonl
+*.json
+
+/leakage/benbench/
+/leakage/data/
+/leakage/log/
+/leakage/previous/
+/leakage/result/
+/leakage/sft_med/
+/leakage/test/
+/leakage/record.txt
+
+.nfs*
+
+/azure/
+
+data-prompt.ipynb
+data-revise.ipynb
+result-*.ipynb
+
+/performance/
+
+/backup/
+
+/leakage/*.ipynb

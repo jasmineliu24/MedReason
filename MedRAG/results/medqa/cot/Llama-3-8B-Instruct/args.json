@@ -1,0 +1,12 @@
+{
+    "llm_name": "meta-llama/Llama-3-8B-Instruct",
+    "rag": false,
+    "HNSW": true,
+    "k": 32,
+    "corpus_name": "MedCorp",
+    "retriever_name": "MedCPT",
+    "results_dir": "./results",
+    "dataset_name": "medqa",
+    "batch_size": 128,
+    "dataset_path": "/n/holylfs06/LABS/kempner_undergrads/Lab/jasmineliu/clinical-llm-benchmark/dataset_raw/106.MIMIC-III Outcome.Diagnosis.SFT.json"
+}
